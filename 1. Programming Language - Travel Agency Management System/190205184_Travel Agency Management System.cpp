@@ -3,7 +3,6 @@
 // Name: Hashin Israq
 // ID: 190105184, Lab Group: C2, Year: 2, Semester: 1.
 
-
 #include<iostream>
 #include<vector>
 #include<fstream>
@@ -14,9 +13,6 @@ class NewTravelTrip                // Create a Class named NewTravelTrip
 {
 public:                            // Access specifier
     NewTravelTrip();               // Default Constructor which is a type of Function
-    NewTravelTrip(int m)           // Parameterized Constructor.
-    {
-    }
     void AddTrip();                // This Function is Add data to the previous recorded user
     string name;
     string date;
@@ -53,11 +49,7 @@ public:
 
 
 
-
-vector<NewTravelTrip>trips;       // Create a Global Vector
 int inv;                          // Global Variable for auto invoice id
-
-
 
 NewTravelTrip::NewTravelTrip()    // Default constructor called automatically
 {
@@ -91,6 +83,8 @@ NewTravelTrip::NewTravelTrip()    // Default constructor called automatically
     inv++;                   // ++Invoice ID
 }
 
+
+vector<NewTravelTrip>trips;       // Create a Global Vector
 
 void ShowAllUser::showUser()
 {
@@ -388,7 +382,7 @@ int main()
         {
             cout << "\t\tYou have chosen Add Trip"<< endl;
             cout << endl;
-            NewTravelTrip tp(0);
+            NewTravelTrip tp;
             tp.AddTrip();
             cout << "\t\tYour Trip is Added. "<< endl;
             cout << endl;
@@ -399,7 +393,7 @@ int main()
         {
             cout << "\t\tYou have chosen Edit Trip"<<endl;
             cout << endl;
-            NewTravelTrip tp(0);
+            NewTravelTrip tp;
             tp.EditTrip();
             cout << endl;
 
@@ -409,7 +403,7 @@ int main()
         {
             cout << "\t\tYou have chosen Delete Trip" << endl;
             cout << endl;
-            NewTravelTrip tp(0);
+            NewTravelTrip tp;
             tp.DeleteTrip();
             cout <<  endl;
 
@@ -423,7 +417,7 @@ int main()
             cout << endl;
 
             // saving active trips into file
-            ofstream MyFile("/home/israq/Desktop/TAMS/travel.txt");
+            ofstream MyFile("D:\BSc\EEE-Projects\travel.txt");
             MyFile << "Inv_No\t" <<"Name\t\t" << "Address\t\t" << "\tPhone No\t" << " " << "Email Address\t\t" << "\tTrip Date\t" << "Start Location\t\t" << "Final Location" << endl;;
             for(int i = 0; i < trips.size(); i++)
             {
