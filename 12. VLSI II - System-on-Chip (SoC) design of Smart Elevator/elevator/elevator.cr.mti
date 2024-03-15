@@ -1,0 +1,15 @@
+C:/Users/Rifat/Desktop/elevator/elevator.v {1 {vlog -work work -stats=none C:/Users/Rifat/Desktop/elevator/elevator.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module elevator
+
+Top level modules:
+	elevator
+
+} {} {}} C:/Users/Rifat/Desktop/elevator/elevator_tb.v {1 {vlog -work work -stats=none {C:\Users\Rifat\Desktop\elevator\elevator_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module elevator_tb
+
+Top level modules:
+	elevator_tb
+
+} {} {}}
